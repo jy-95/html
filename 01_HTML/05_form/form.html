@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form태그</title>
+  </head>
+  <body>
+    <!-- 입력을 받는 요소는 무조건 다 form 태그 안에 들어있어야 한다. -->
+    <!-- 
+    <form action> "어디에 보낼건지(경로)" method="get | post">
+    input : 사용자 입력을 위한 태그
+      - 텍스트 타입
+      - 날짜 시간 타입
+      - 선택 타입
+      - 특수 타입
+    fieldset, legend 태그
+    폼 요소를 그룹화하고 그룹의 제목을 지정  
+   -->
+    <form action="">
+      <fieldset>
+        <legend>분류1 : 텍스트 타입</legend>
+        <label for="text">입력란</label>
+        <input type="text" name="" id="text" /><br />
+        <label for="pw">비밀번호 입력란</label>
+        <input type="password" name="" id="pw" /><br />
+        <label for="email">email 입력란</label>
+        <input type="email" name="" id="email" /><br />
+        <label for="number">숫자 입력란</label>
+        <input type="number" max="3" min="0" id="number" /><br />
+        <label for="search">검색</label>
+        <input
+          type="search"
+          name=""
+          id="search"
+          placeholder="검색어를 입력하세요...?"
+        /><br />
+        <label for="url">url</label> <input type="url" name="" id="url" /><br />
+        <label for="tel">전화번호 입력란</label>
+        <input type="tel" name="" id="tel" /><br />
+        <!-- 모바일 환경에서 볼 시 ten키가 등장한다. -->
+
+        <label for="longText">여러 줄 입력란</label
+        ><br><textarea name="" id="longText" cols="30" rows="10"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>분류2: 날짜/시간 타입</legend>
+        <label for="date">날짜</label>
+        <input type="date" name="" id="date"> <br>
+        <label for="dateTime">날짜 시간</label>
+        <input type="datetime-local" name="" id="dateTime"> <br>
+        <label for="month">월</label>
+        <input type="month" name="" id="month"> <br>
+        <label for="week">주</label>
+        <input type="week" name="" id="week"> <br>
+        <label for="time">시간</label>
+        <input type="time" name="" id="time"> <br>
+      </fieldset>
+
+      <fieldset>
+        <legend>분류3: 선택 타입</legend>
+        체크박스<br>
+        <input type="checkbox" name="question" id="Q1" value="111"><label for="Q1">질문1</label>
+        <input type="checkbox" name="question" id="Q2" value="222" checked><label for="Q2">질문2</label>
+        <input type="checkbox" name="question" id="Q3" value="333"><label for="Q3">질문3</label>
+        <hr>
+        라디오버튼<br>
+        <input type="radio" name="choice" id="C1" value="1"><label for="C1">선택1</label>
+        <input type="radio" name="choice" id="C2" value="2"><label for="C2">선택2</label>
+        <input type="radio" name="choice" id="C3" checked value="3"><label for="C3">선택3</label>
+        <hr>
+        <label for="file">파일</label><input type="file" name="" id="file">
+        <hr>
+        <label for="select">셀렉트</label>
+        <!-- 모바일 환경에서는 바로 창이 뜨고 pc에서도 키보드로 선택 가능 -->
+        <select name="select" id="select">
+          <option value="1">선택1</option>
+          <option value="2" selected>선택2</option>
+          <option value="3">선택3</option>
+
+        </select>
+      </fieldset>
+
+      <input type="submit" value="동작확인" />
+    </form>
+  </body>
+</html>

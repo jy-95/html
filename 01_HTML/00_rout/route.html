@@ -20,15 +20,21 @@
       _parent : 현재 프레임의 부모 프레임에서 링트를 연다.
       _top : 모든 프레임을 벗어나 전체 창을 로드
 
+    # 앵커
+      링크가 문서 내의 특정 위치를 가리키는 경우
+      <태그 id ="앵커 이름">contents</태그>
+      <a href = "경로" #앵커 이름> 앵커로 이동하기</a>
+
   -->
 
     <!-- 상대 경로 -->
     <!-- 1. 동일한 폴더 내의 파일을 참조 -->
     <a href="./sameRoute.html" target="_blank">sameRoute로 가기</a>
     <!-- 2. 하위 폴더의 파일을 참조 -->
-    <a href="./sub/subRoute.html"target="_parent">subRoute로 갈까용</a>
+    <a href="./sub/subRoute.html" target="_parent">subRoute로 갈까용</a>
     <!-- 3. 상위 폴더의 파일을 참조 -->
-    <a href="../home.html"target="_top"> 홈으로 </a>
+    <a href="../home.html" target="_top"> 홈으로 </a>
 
+    <a href="../02_image/image.html#anchor">앵커로 이동하기</a>
   </body>
 </html>

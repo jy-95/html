@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- ctrl + / -- >
+<!-- html 주석 -->
+<!-- HTML 문서의 버전 정보를 알리는 표시 -->
+<html lang="en">
+  <!-- HTML문서의 시작을 알리는 부분 -->
+
+  <head>
+    <!-- HTML문서의 메타데이터를 정의 -->
+    <!-- 다른 데이터를 정의하는 데이터 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HOME</title>
+    <!--
+      <link>, <script>, <style>...
+      외부 파일(javascript, css등)을 불러옴.
+    -->
+  </head>
+
+  <!-- 실제 브라우저에서 데이터를 출력하는 부분 -->
+  <body>
+    <h1>Hello World!</h1>
+
+    <!--
+    * Web 경로
+      protocol host           port
+      https://www.domain.com :8888 /login ?query=name
+      -url
+        origin : protocol + host + port
+        protocol : http, https 웹과 페이지가 소통하는 방식
+        host : 사이트 도메인 (IP주소를 보기 쉽게 문자열로 변경)
+        port : 포트 번호
+        path : 서버측의 사이트 내부 경로
+        query string : 요청의 key와 value 값
+    * Directory 경로
+      HTML 파일에서 경로는 파일 시스템 내의 위치를 지정한다.
+      웹 페이지에서 다른 파일이나 리소스를 참조하는데 사용.
+
+      경로 구분
+        - 상대경로 (Relative path)
+        - 절대경로 (Absolute path)
+      / 절대경로
+      ./ 현재 경로
+      ../ 상위 경로로
+
+    -->
+
+    <!-- 
+    00_route
+      sub
+        subRoute.html
+      route.html
+      same.html
+    01_text
+      list.html
+      text.html
+    02_image
+      image.html
+    home.html
+     -->
+
+    <ol style="list-style-type: square">
+      <li>00_route</li>
+      <ul>
+        <li>sub</li>
+        <ol>
+          <a href="./00_rout/sub/subRoute.html"><li>subRoute.html</li></a>
+        </ol>
+        <a href="./00_rout/route.html"><li>route.html</li></a>
+        <a href="./00_rout/sameRoute.html"><li>sameRoute.html</li></a>
+      </ul>
+      <li>01_text</li>
+      <ul>
+        <a href="./01_text/list.html"><li>list.html</li></a>
+        <a href="./01_text/text.html"><li>text.html</li></a>
+      </ul>
+      <li>02_image</li>
+      <ul>
+        <a href="./02_image/image.html"><li>image.html</li></a>
+      </ul>
+      <a href="./home.html"><li>home.html</li></a>
+    </ol>
+
+    <a href="/01_HTML/01_text/text.html">라이브 서버 기준 절대 경로</a>
+    <a href="c:/workspace/html-css-js-lecture-47/01_HTML/01_text/text.html"
+      >파일 시스템 기준 절대 경로</a
+    >
+
+    <a href="http://naver.com">네이버</a>
+
+    <iframe
+      width="560"
+      height="315"
+      src="./00_rout/route.html"
+      frameborder="2"
+    ></iframe>
+  </body>
+</html>

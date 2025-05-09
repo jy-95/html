@@ -82,7 +82,25 @@
         </select>
       </fieldset>
 
-      <input type="submit" value="동작확인" />
+      <fieldset>
+        <legend>분류4: 특수타입</legend>
+        범위 <input type="range" value="0" max="10" name="range" id=""><br>
+        색상 <input type="color" name="" id=""><br>
+        히든 <input type="hidden" value="화면에 안보이지만 전달하고 싶은 값" name="hidden"><br>
+
+      </fieldset>
+
+      <input type="submit" value="제출" >
+      <input type="reset" value="재입력">
+
+      <button type="submit">제출</button>
+      <button type="reset">재입력</button>
+
+<!-- button 태그는 닫는 태그 O, input 타입은 X  -->
+
+      <input type="image" src="../../asset/img/send.png" alt="submit 기능이 들어있는 img">
+      <!-- input image 태그는는 이미지 자체가 submit 버튼처럼 동작하게 됨 -->
+
     </form>
   </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 관련 스타일</title>
+  <!-- 웹 폰트 참조하기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Share+Tech&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Playwrite+DK+Loopet:wght@100..400&family=Share+Tech&display=swap" rel="stylesheet">
+  <style>
+    /*
+    * 텍스트 관련 서식 종류
+
+    font-style : 문자 스타일(normal | italic | ...)
+    font-variant : 소문자를 작은 대문자로 표현하기
+    font-weight : 텍스트 두께 (100~900, bold(700), normal(400), lighter, ...)
+    font-size : 텍스트의 크기 (단위)
+    font-family : 글꼴 지정
+
+    * 폰트 단축 속성 : 순서와 필수항목에 주의, 각 항목은 공백으로 구분,
+    백업폰트 지정시 콤마로 연결
+    font : <font-style> <font-variant> <form-weight> <font-size>/<line-height> <font-family>;
+      1. 필수항목 : <font-size><font-family> (빠지면 css가 무효처리됨!)
+      2. line-height는 /를 붙여야 적용됨
+    */
+
+    .font-style{
+    /* font-style: italic;
+    font-variant: small-caps;
+    font-weight: 900;
+     font-family: cursive; */
+    /* font: italic small-caps 900 30px cursive;*/
+      font: 30px/5 "Share Tech", cursive;
+      /* font: 30px ; ->적용X */
+
+      /*
+          color: 글자 색 지정
+          text-decoration: 텍스트의 줄 표시, 제거 | none | underline | overline | line-through
+          text-transform: 대소문자 변환 | none | capitalize | uppercase | lowercase | ...
+          text-shadow: 텍스트 그림자 효과 | none | <가로거리><세로거리><번짐정도><색상> (개발자도구 이용해서 보는게 편함)
+      */
+    }
+    .blue-shadow-text{
+      color:cyan;
+      text-decoration: line-through;
+      text-transform: capitalize;
+      text-shadow: 6px 8px 2px #2196F3;
+      font: 20px/1 "Playwrite DK Loopet"
+    }
+
+    /*
+      * 공백 및 자간 및 줄바꿈
+        white-space :
+          normal (공백 1 개행 X 줄바꿈 O)
+          | nowrap (공백 1 개행 X 줄바꿈 X)
+          | pre (공백 O 개행 O 줄바꿈 X)
+          | pre-line (공백 1 개행 O 줄바꿈 O)
+          | pre-wrap (공백 O 개행 O 줄바꿈 O)
+
+        letter-spacing : normal | <크기>
+        word-spacing: normal | <크기>
+    */
+
+    .white-space-test {
+      white-space: pre;
+      letter-spacing: normal;
+      word-spacing: normal;
+      font: 30px/5 "Codystar"
+    }
+
+    /*
+      문단 관련 속성
+      text-align : start | end | left | right | center | justify
+        텍스트 또는 인라인 요소의 정렬 지정. 일부 블록요소에는 동작하지 않는다.
+      text-justify(교재 237p) -> 지원 안함
+      text-indent : <크기> | <백분율>
+        단락(문단, p태그)의 첫 글자 앞의 들여쓰기를 조절
+        백분율로 지정하는 경우 부모요소의 너비를 기준으로 한 상대값으로 적용 됨.
+      line-height(행간) : normal | <숫자> | <크기> | <백분율>
+        숫자로 설정하는 경우 글자 크기의 n배로 계산
+
+    */
+
+    .paragraph-style {
+      text-align: justify;
+      /* text-justify: distribute; 단, 브라우저 호환성에 의해 현재 fire fox 이외에서는 사용할 수 없다 */
+      text-indent: 5%;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+  <p class="font-style">AppleBanana 텍스트 아무거나</p>
+  <p class="blue-shadow-text">BlueShadowText</p>
+  <p class="white-space-test">
+    Lorem ipsum dolor sit amet consectetur  adipisicing elit. Expedita nobis corporis,    dolorem tenetur in
+
+    at aliquam delectus? Voluptate, quidem            dicta
+     nihil
+      atque libero         aliquam vel error, autem at nobis maiores.
+  </p>
+  <p class="paragraph-style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, maxime sint? Eos 
+    error soluta nihil dolore? Est doloremque veniam maxime facere autem perspiciatis suscipit eaque, tempore 
+    maiores? Reprehenderit, quia nobis?</p>
+</body>
+</html>

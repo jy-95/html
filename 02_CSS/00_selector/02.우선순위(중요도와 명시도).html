@@ -30,9 +30,46 @@
       5. 태그_1pt
     
     */
+
+    h1 {
+      color:red !important;
+      /* !important는 속성 값 뒤에 붙이며
+        해당 규칙이 다른 모든 규칙보다 우선 적용 */
+    }
+
+    .text {
+      color:blue;
+    }
+
+    #text {
+      color:green;
+    }
+
+    .bold {
+      font-weight: bold;
+      color:blue;
+    }
+
+    .red {
+      color:red;
+      font-weight: normal;
+    }
   </style>
 </head>
 <body>
+  <h1>CSS 적용 우선순위 - 태그</h1>
+  <h1 class="text">CSS 적용 우선순위 - 클래스</h1>
+  <h1 class="text" id="text">CSS 적용 우선순위 - 아이디</h1>
+  <h1 id="text" style="color: yellow;">CSS 적용 우선순위 - 인라인</h1>
+
+  <!-- HTML 요소의 여는 태그 안 클래스 속성에 속성값으로 작성한 순서는
+    스타일 우선순위에 영향을 주지 않는다!
+    스타일 태그 안에서 가장 마지막에 있는 속성으로 덮어쓰기를 한다.-->
+  <p class="bold red">bold와 red클래스가 적용된 단락
+    중복되는 속성을 가지는 스타일 여러개를 적용하는 경우
+    선택자 우선순위가 높은 쪽을 적용하고, 우선순위가 같다면 CSS소스 기준 더 뒤에 작성한 속성값이 적용된다.
+  </p>
   
+
 </body>
 </html>

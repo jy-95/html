@@ -1,0 +1,35 @@
+[title]{
+  color: green;
+}
+
+p{
+  color: blue;
+}
+
+.description~section{
+  background-color: rgb(185, 157, 212);
+}
+
+h2+p{
+  color: red;
+}
+
+ul>li{
+  font-weight: bold;
+}
+
+.highlight{
+  background-color: yellow;
+}
+
+.highlight:hover{
+  background-color: brown;
+}
+
+#unique-item{
+  font-size: smaller;
+}
+
+div>p:nth-child(odd)::before{
+  content: "✅";
+}

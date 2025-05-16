@@ -56,13 +56,43 @@
     <div style="flex-shrink: 0;">2</div>
     <div>3</div>
     <div style="flex-shrink: 2;">4</div>
+    <div>1</div>
+    <div style="flex-shrink: 0;">2</div>
+    <div>3</div>
+    <div style="flex-shrink: 2;">4</div>
   </div>
   <hr>
   <h3>flex-basis 속성</h3>
-  <p>아이템의 기본크기 설정</p>
+  <p>아이템의 기본크기 설정
+      width와 flex-basis 모두 요소의 너비를 설정하는 속성이지만
+      flex-basis는 flex 컨테이너 안에서만 동작한다.
+      요소의 크기가 변동되기 전의 기준값 역할을 한다.
+      <br>
+      flex 레이아웃 내에서는 flex-basis가 width보다 우선순위가 높다.
+  </p>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex-basis: 200px; width: 500px;">3</div>
+    <div>4</div>
+  </div>
+  <hr>
+  <!-- 단축속성
+    flex: <grow><shrink><basis>;
+      숫자값 하나만 부여하면 grow를 설정하고 나머지 두 값은 기본값
+  -->
   <hr>
   <h3>align-self 속성</h3>
-  <p>형제요소와의 배치를 정렬</p>
+  <p>형제요소와의 배치를 정렬
+      부모인 flex-container의 align-items 속성을 상속
+
+  </p>
+  <div class="flex-container" style="height: 200px; align-items: flex-start;">
+    <div>1</div>
+    <div style="align-self: flex-end;">2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
   <hr>
 </body>
 </html>

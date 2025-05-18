@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카드 레이아웃 예제</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .container {
+      display: flex;
+      gap: 1em;
+      padding: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-body {
+      padding: 1em;
+    }
+
+    .card-body h3 {
+      margin: 0 0 0.5em 0;
+    }
+
+    .card-body p {
+      color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>카드 레이아웃</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Image 1">
+      <div class="card-body">
+        <h3>카드 제목 1</h3>
+        <p>이것은 카드에 대한 설명입니다.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Image 2">
+      <div class="card-body">
+        <h3>카드 제목 2</h3>
+        <p>이것은 또 다른 카드입니다.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Image 3">
+      <div class="card-body">
+        <h3>카드 제목 3</h3>
+        <p>이 카드도 예쁘게 디자인됐어요.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ⓒ 2025 My Practice Page</p>
+  </footer>
+
+</body>
+</html>

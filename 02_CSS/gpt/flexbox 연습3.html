@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox 연습3</title>
+    <style>
+      header {
+        list-style-type: none;
+        background-color: aquamarine;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header li {
+        display: inline;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      section.container {
+        flex: 3;
+      }
+
+      aside {
+        flex: 1;
+        background-color: #f8f8f8;
+        padding: 1em;
+      }
+
+      main {
+        display: flex;
+        gap: 20px;
+        padding: 1em;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+
+      .card {
+        flex: 1;
+        border: 1px solid black;
+        padding: 1em;
+        box-shadow: 8px 13px 8px 0px;
+        width: 48%;
+      }
+
+      .card li {
+        list-style-type: none;
+        font-size: smaller;
+        margin: 0 auto;
+      }
+
+      .card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+
+      .card:hover {
+        background-color: #f0f8ff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 0.5em 1em;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        box-shadow: 0 0 0 0.2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>카드뉴스</h1>
+      <nav>
+        <ul>
+          <li><a href="">Menu-1</a></li>
+          <li><a href="">Menu-2</a></li>
+          <li><a href="">Menu-3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <article class="card">
+          <img
+            src="https://via.placeholder.com/300x150?text=Image+1"
+            alt="img1"
+          />
+          <h2>card1</h2>
+          <p>이 카드는 뭘까</p>
+          <p>아무튼 이건 첫번째 카드이다</p>
+          <ul>
+            <li>특징1</li>
+            <li>특징2</li>
+            <li>특징3</li>
+          </ul>
+          <small>작성일자: 2025/05/18</small>
+          <button>자세히 보기</button>
+        </article>
+        <article class="card">
+          <img
+            src="https://via.placeholder.com/300x150?text=Image+2"
+            alt="img2"
+          />
+          <h2>card2</h2>
+          <p>이 카드는 카드다</p>
+          <p>이 카드는 두번째 카드가 될 것이고</p>
+          <ul>
+            <li>특징1</li>
+            <li>특징2</li>
+            <li>특징3</li>
+          </ul>
+          <small>작성일자: 2025/05/18</small>
+          <button>자세히 보기</button>
+        </article>
+        <!-- <article class="card">
+        <img src="https://via.placeholder.com/300x150?text=Image+3" alt="img3" />
+        <h3>card3</h3>
+        <p>이 카드도 카드다</p>
+        <p>이 카드는 세번째 카드여야 한다</p>
+        <ul>
+          <li>특징1</li>
+          <li>특징2</li>
+          <li>특징3</li>
+        </ul>
+        <button>자세히 보기</button>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/300x150?text=Image+4" alt="img4" />
+        <h3>card4</h3>
+        <p>이 카드가 끝 카드다</p>
+        <p>이 카드는 마지막 카드여야 한다</p>
+        <ul>
+          <li>특징1</li>
+          <li>특징2</li>
+          <li>특징3</li>
+        </ul>
+        <button>자세히 보기</button>
+      </article> -->
+      </section>
+      <aside>
+        <h3>인기 기사</h3>
+        <ul>
+          <li>기사1</li>
+          <li>기사2</li>
+          <li>기사3</li>
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

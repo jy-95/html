@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox 연습</title>
+    <style>
+      .container {
+        display: flex;
+        width: 80vw;
+        height: 60px;
+        background-color: #eee;
+        margin: 0 auto;
+      }
+
+      .menu {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        height: 100%;
+      }
+
+      .menu:hover {
+        background-color: skyblue;
+        color: white;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .menu {
+          width: 100%;
+          height: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <a href="#" class="menu">menu1</a>
+      <a href="#" class="menu">menu2</a>
+      <a href="#" class="menu">menu3</a>
+      <a href="#" class="menu">menu4</a>
+    </nav>
+  </body>
+</html>

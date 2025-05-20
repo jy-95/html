@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문</title>
+  <script>
+    // 조건문
+    // if문
+    /*
+      if (조건){
+        참이면 실행할 명령문
+      }
+    */
+
+    //false로 평가되는 값? 0, null, 공백, undefined
+    //어떤 값이 거짓으로 평가되는지 알아보기
+
+    const num = 10;
+    if (num < 20){
+      console.log('20보다 작은 수 입니다.');
+    } else {
+      console.log('20보다 큰 수 입니다.');
+    }
+
+    // false로 평가되는 값?
+    // 어떤 값이 거짓으로 평가되는지 알아주기
+    if(!0){
+      console.log('null:' + false);
+      console.log('null을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
+    }
+    if(!null){
+      console.log('0:' + false);
+      console.log('0을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
+    }
+    if(!''){
+      console.log('공백:' + false);
+      console.log('공백을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
+    }
+    if(!undefined){
+      console.log('undefined:' + false);
+      console.log('undefined을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
+    }
+
+    //선택문 switch
+    /*
+      switch(일치하는지 확인할 대상) {
+        case 비교할 대상
+          케이스에 들어왔을 때 실행할 명령문.
+          break;
+        case2 비교할 대상:
+          케이스에 들어왔을 때 실행할 명령문
+        default;
+          모든 케이스에 다 들어가지 못했을 때 실행할 명령문
+      }
+          
+        -break문을 만나야 switch문을 빠져가나며 break가 없으면 다음 case가 연달아 실행되어버림
+        - default는 선택사항이다. 어떤 case와도 일치하지 않으면 실행됨
+        -case와의 일치 여부는 엄격비교(===)이므로 타입까지 일치해야 함
+        - 가독성을 위한 간결한 분기 차이가 필요할 때 사용)
+
+    */
+
+    // const site = prompt('네이버, 다음, 구글 중 즐겨 사용하는 사이트 입력을 받아보자!')
+
+    // switch (site){
+    //   case '네이버':
+    //     document.write('<a href="http://www.naver.com">네이버</a>');
+    //     break;
+    //   case '다음' :
+    //     document.write('<a href="http://www.daum.net">다음</a>');
+    //     break;
+    //   case '구글' :
+    //     document.write('<a href="http://www.google.com">구글</a>');
+    //     break;
+    //   default:
+    //     // document.write('보기중에 없는 사이트입니다...');
+    //     alert('보기중에 없는 사이트입니다...')
+    //     break;
+    //   }
+
+  //반복문          //for in = object, for = 배열, 그 외 기타 등등
+  // -for(변수는 let으로)
+  /*
+    for(초기식;조건식;증감식){
+      명령문
+    }
+    // 내부 실행순서
+      초기식->조건식->실행문->증감식->조건식->실행문...
+    실행블록 안에 break나 return으로 반복 종료가능
+    continue 사용시 증감식 실행후 다음 반복으로 넘어감
+  */
+
+  for (let index = 0; index < 5; index++) {
+    if (index%2 === 0) {
+      document.write(`<p class="red">반복문 ${index}</p>`);
+    } else {
+      document.write(`<p class="blue">반복문 ${index}</p>`);
+    }
+
+  }
+
+  // for...in : 객체(object)의 열거 가능한 속성(key)에 대해 반복
+  // 배열에도 사용 가능하지만 순서를 보장하지 않는다...
+  // 반복시마다 새로운 key를 가리키는 식으로 동작(변수는 const로)
+
+  const obj = {
+    a: 1,
+    b: 2,
+    c: 3,
+  };
+  for (const key in obj) {
+    console.log(key, obj[key]); //obj[key] = key 값의 value
+  }
+
+  // for...of : 이터러블에 사용. 반복대상은 그 value이고 배열, 문자열에 자주 쓰임
+  // 이터러블이란? 반복 가능한 객체!(배열, 문자열, Set, Map, ... 등)
+  // 반복시마다 새로운 value를 가리키는 식으로 동작
+  const arr = ['a', 'b', 'c'];
+  for (const element of arr) {
+    console.log(element);
+  }
+
+  // forEach : 배열에 사용. 반복대상은 value
+  const arr2 = [1,2,3];
+  arr2.forEach(
+    (value, index)=>{ console.log(value, index); }   //(value(배열의 각기 요소 값), index(배열의 인덱스))=>{ 실행문 }
+  );
+
+  // -while
+  /*
+    while(조건식){
+      실행문;
+    }
+  */
+
+  // let condition = true;
+  // while (condition) {
+  //   condition = prompt('값을 입력받는다');
+  //   alert(`입력받은 값${condition} 입력받은 값의 타입${typeof condition}`);
+    // prompt메서드를 이용해 입력받은 값은 모두 string으로 받는다.
+    // 확인을 누르면 공백이 들어가 거짓으로 평가되므로 반복문 종료
+    // 취소를 누르면 null이 들어가 거짓으로 평가되므로 반복문 종료
+  // }
+
+  // -do...while : 최소한 한 번은 반드시 실행
+  /*
+    do{
+      실행문;
+    } while(조건식);
+  */
+  // let choice
+  // do {
+  //   choice = prompt(`1. 시작 2. 종료`)
+  // } while (choice !== '1' && choice !== '2');
+  </script>
+  <style>
+    .red{
+      color : red
+    }
+
+    .blue{
+      color : blue
+    }
+  </style>
+</head>
+<body>
+
+</html>

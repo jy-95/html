@@ -99,8 +99,28 @@
     console.log(typeof 123);
     // instanceof : 반환값이 논리형이다.
     // 타입을 확인하고 싶은 대상 instanceof 확인하려는 인스턴스
+    // 인스턴스란? 어떤 클래스나 생성자함수를 사용하여 생성된 객체
+    // 특정 개체가 어떤 생성자 함수(혹은 클래스)로 부터 생성되었는지 확인할 수 있다.
     console.log([] instanceof Array); //true
     console.log({} instanceof Array); //false
+
+    //연산자 우선순위
+    /*
+      1. 소괄호
+      2. 증감연산자(단항연산자)
+      3. 산술연산자(곱나눗셈 다음에 덧뺄셈)
+      4. 비교연산자
+      5. 삼항연산자
+      6. 논리연산자
+      7. 대입(복합대입)연산자
+
+      괄호가 가장 우선이므로 복잡할 땐 괄호를 명확히!!!
+      값을 결정하는 연산자가 값을 저장하는 연산자보다 우선!!!
+    */
+
+    let num3 = 5;
+    let num4 = 10;
+    console.log((num3+num4) > 12 && (num4 - num3) < 10); //true
 
   </script>
 </head>

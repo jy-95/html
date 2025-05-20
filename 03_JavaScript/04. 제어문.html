@@ -13,9 +13,6 @@
       }
     */
 
-    //false로 평가되는 값? 0, null, 공백, undefined
-    //어떤 값이 거짓으로 평가되는지 알아보기
-
     const num = 10;
     if (num < 20){
       console.log('20보다 작은 수 입니다.');
@@ -23,15 +20,15 @@
       console.log('20보다 큰 수 입니다.');
     }
 
-    // false로 평가되는 값?
-    // 어떤 값이 거짓으로 평가되는지 알아주기
+    // false로 평가되는 값? 0, null, 공백, undefined
+    // 어떤 값이 거짓으로 평가되는지 알아두기
     if(!0){
-      console.log('null:' + false);
-      console.log('null을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
-    }
-    if(!null){
       console.log('0:' + false);
       console.log('0을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
+    }
+    if(!null){
+      console.log('null:' + false);
+      console.log('null을 false로 평가하고 그의 역이므로 코드블록이 실행됨.');
     }
     if(!''){
       console.log('공백:' + false);

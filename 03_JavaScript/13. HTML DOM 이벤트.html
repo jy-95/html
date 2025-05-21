@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+  <script>
+    /*
+      이벤트란?
+        DOM의 일부. 사용자와 웹 페이지 사이의 상호작용을 다룰 수 있도록 만들어진 기능
+        상태변화나 행동을 나타내는 신호
+        이벤트가 감지되면 브라우저가 콜백함수를 실행할 수 있도록 함.
+        이벤트 종류 : http://www.w3schools.com/jsref/dom_obj_event.asp
+
+      이벤트 핸들러 추가하기
+      1. HTML 인라인 이벤트핸들러
+        : 빠르지만 유지보수가 어려움
+      2. DOM요소의 프로퍼티에 이벤트 핸들러 할당
+        : 하나의 핸들러만 설정 가능
+      3. addEventListener 메서드 방식
+        : 가장 많이 씀. 표준
+    */
+
+    // 자주 쓰이는 이벤트 : focus, focusout, change, keyup, submit (시험 출제..?)
+   function changeRed() {
+    console.log('changeRed 실행');
+    document.getElementById('mouse').style.color = 'red';
+   }
+
+   function changeBlue() {
+    console.log('changeBlue 실행');
+    document.getElementById('mouse').style.color = 'blue';
+   }
+  </script>
+</head>
+<body>
+  <!-- 1. -->
+  <div id="mouse" onmouseover="changeRed()" onmouseout="changeBlue()">마우스를 올려보세요.</div>
+
+  <!-- 2. -->
+  <button id="myButton">myButton</button>
+  <script>
+    const myButton = document.getElementById('myButton')
+    myButton.onclick = () => {
+      console.log('myButton 버튼이 클릭되었습니다!');
+    };
+  </script>
+
+  <!-- 3 -->
+  <button id="myButton2">myButton2</button>
+  <script>
+    const handleClick = () => {
+      console.log('myButton2 버튼이 클릭되었습니다!');
+    };
+    const myButton2 = document.getElementById('myButton2')
+    myButton2.addEventListener('click',handleClick);    //addEventListener('이벤트 이름', '이벤트 핸들러 이름')
+    // myButton2.removeEventListener('click',handleClick); //이벤트 핸들러 삭제. 정확한 이벤트와 이벤트 핸들러 이름을 적어야 함.
+  </script>
+
+  <button id="myButton3">myButton3 2번 버튼의 이벤트를 제거하는 버튼</button>
+  <script>
+    const removeEvent = () => {myButton2.removeEventListener('click',handleClick);};
+
+    const myButton3 = document.getElementById('myButton3')
+    myButton3.addEventListener('click',removeEvent)
+  </script>
+
+</body>
+</html>

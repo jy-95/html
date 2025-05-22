@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math</title>
     <script>
       // Math
       // 인스턴스 생성이 불필요한 정적 유틸리티 객체 상태없이 공용기능을 제공
       // 데이터를 담는것이 아닌 기능만을 제공하므로 인스턴스를 만들지 않고 직접 사용한다.
       // static 메서드/속성(자바로치면 static field)을 제공한다.
-      console.log(`원주율: ${Math.PI}`);  // 정적 속성
+      console.log(`원주율: ${Math.PI}`); // 정적 속성
       console.log(`오일러상수: ${Math.E}`);
       // abs()  => 절대값
 
-
       // ceil()  => 올림
       console.log('-----ceil-----');
+      console.log(Math.ceil(1.2)); //2
+      console.log(Math.ceil(-8.2)); //-8
 
       // js 에서는 0, -0을 구분하여 사용한다.
 
       // floor()  => 내림
       console.log('-----floor-----');
-
+      console.log(Math.floor(3.2)); //3
+      console.log(Math.floor(-5.6)); //-6
 
       // trunc()  => 버림 (정수 부분만 반환)
       console.log('-----trunc-----');
-
+      console.log(Math.trunc(2.7));   //2
+      console.log(Math.trunc(-3.5));  //-3
 
       // round()  => 반올림
       console.log('-----round-----');
-
+      console.log(Math.round(3.4));   //3
+      console.log(Math.round(3.7));   //4
 
       console.log('=====참고=====');
       console.log(0 / 0); //NaN
@@ -46,26 +49,32 @@
 
       // max() 최댓값
       console.log('-----max-----');
+      console.log(Math.max(3,5,2));   //5
+      console.log(Math.max(-1,0,-7)); //0
+
+      const arr1 = [3, 5, 2];
+      console.log(Math.max(...arr1)); //5
 
       // min() 최솟값
       console.log('-----min-----');
+      console.log(Math.min(3,5,2));   //2
+      console.log(Math.min(-1,0,-7)); //-7
+
+      const arr2 = [3, 5, 2];
+      console.log(Math.min(...arr2)); //2
+
 
       // pow(n1, n2) : 거듭제곱
       console.log('----pow-----');
-
+      console.log(Math.pow(2,3));     //8
 
       // random()  => 0 ~ 1 미만의 난수 발생
-
+      console.log(Number.parseInt(Math.random()*10)); //정수형으로 변환
 
       // 0 ~ 45 랜덤
-      console.log(Math.trunc(Math.random()*45));
-
+      console.log(Math.trunc(Math.random() * 45));
     </script>
-
   </head>
 
-  <body>
-
-  </body>
-
+  <body></body>
 </html>

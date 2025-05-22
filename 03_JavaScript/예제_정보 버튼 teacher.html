@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function () {
+      const btn1 = document.getElementById('btn1');
+      const btn2 = document.querySelector('#btn2');
+      btn1.addEventListener('click', () => {
+        const choice = confirm('정보를 표시하시겠습니까?');
+        console.log(choice);
+        if (choice) {
+          // 정보 보여줌
+          document.querySelector('#target').innerHTML = '정보 보여주기 성공';
+          document.querySelector('#target').style.visibility = 'visible';
+        }
+        
+      });
+      btn2.addEventListener('click', () => {
+        document.querySelector('#target').style.visibility = 'hidden';
+      });
+    };
+  </script>
+</head>
+<body>
+  <input type="button" value="정보보기" id="btn1">
+  <input type="button" value="정보닫기" id="btn2">
+  <div id="target"></div>
+</body>
+</html>

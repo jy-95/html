@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>흐잉</title>
+  </head>
+  <body>
+    <h3>입력 글자 수 출력</h3>
+    <input type="text" id="ipt" />
+    <span id="sp">0글자</span>
+
+    <script>
+      const ipt = document.querySelector('#ipt');
+      const span = document.getElementById('sp');
+
+      const changeBlue = () => {
+        // document.getElementById('ipt').style.backgroundColor = 'blue';
+        ipt.style.backgroundColor = 'blue';
+      };
+
+      const changeNone = () => {
+        // document.getElementById('ipt').style.backgroundColor = 'blue';
+        ipt.style.backgroundColor = '';
+      };
+
+      const howMany = () => {
+        // document.getElementById('sp').innerHTML = `${ipt.value.length} 글자`;
+        span.innerHTML = `${ipt.value.length} 글자`;
+
+        if (ipt.value.length >= 10) {
+          // document.getElementById('ipt').style.backgroundColor = 'red';
+          ipt.style.backgroundColor = 'red';
+          // document.getElementById('sp').innerHTML = `10글자 이상입니다.`;
+          span.innerHTML = `10글자 이상입니다.`;
+        } else {
+          // document.getElementById('ipt').style.backgroundColor = 'blue';
+          ipt.style.backgroundColor = 'blue';
+        }
+      };
+
+      ipt.addEventListener('focus', changeBlue);
+      ipt.addEventListener('focusout', changeNone);
+      ipt.addEventListener('keyup', howMany);
+    </script>
+  </body>
+</html>

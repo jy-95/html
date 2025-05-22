@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잉</title>
+  </head>
+  <body style="background-color: aqua">
+    <button id="myButton">배경색 변경</button>
+    <script>
+      const btn = document.querySelector('#myButton');
+
+      // function handleClick() {
+      //   const arr = ['red', 'blue', 'yellow'];
+      //   document.body.style.background = arr[Math.trunc(Math.random()*3)];
+      // }
+      //   btn.addEventListener('click',handleClick);
+
+      // const handleClick2 = () => {
+      //     const arr = ['red', 'blue', 'yellow'];
+      //     document.body.style.backgroundColor = arr[Math.trunc(Math.random()*3)];
+      //   };
+      //   btn.addEventListener('click',handleClick2);
+
+      const bodyTag = document.querySelector('body');
+
+      btn.addEventListener('click', () => {
+        let r = Math.trunc(Math.random() * 255);
+        let g = Math.trunc(Math.random() * 255);
+        let b = Math.trunc(Math.random() * 255);
+        bodyTag.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+      });
+    </script>
+  </body>
+</html>

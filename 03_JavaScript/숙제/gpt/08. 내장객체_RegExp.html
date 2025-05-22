@@ -14,11 +14,17 @@
       // 문자열이 정규식 패턴과 일치하는지 여부를 논리형으로 반환하는
       // 정규식.test(문자열)
 
+      const str = `Hello world!`;
+      const regex = new RegExp(`llo`);
 
+      console.log(regex.test(str));
 
       // 정규식과 일치하는 결과(첫 번째 일치)를 배열로 반환하고 없으면 null로 반환하는
       // 정규식.exec('대상문자열')
 
+      console.log(regex.exec('foo'));
+      console.log(regex.exec(str));
+      console.log(regex.exec('str'));
 
 
       // 문자열에서 정규식과 일치하는 전체 결과를 배열로 반환하는

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호옹</title>
+    <style>
+      td,
+      th {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      table {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open">정보 보기</button>
+    <button id="close">정보 닫기</button>
+
+    <table id="table" style="visibility: hidden">
+      <tr>
+        <th>이름</th>
+        <th>등급</th>
+        <th>가입일</th>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>일반회원</td>
+        <td>20/01/03</td>
+      </tr>
+      <tr>
+        <td>손오공</td>
+        <td>실버회원</td>
+        <td>22/05/05</td>
+      </tr>
+      <tr>
+        <td>이순신</td>
+        <td>골드회원</td>
+        <td>19/03/22</td>
+      </tr>
+    </table>
+
+    <script>
+      const op = document.querySelector('#open');
+      const cls = document.querySelector('#close');
+      const tb = document.getElementById('table');
+
+      const show = () => {
+        const a = confirm('정보를 보시겠습니까?');
+
+        if (a) {
+          tb.style.visibility = 'visible';
+        }
+      };
+
+      const hide = () => {
+        tb.style.visibility = 'hidden';
+      };
+
+      op.addEventListener('click', show);
+      cls.addEventListener('click', hide);
+    </script>
+  </body>
+</html>

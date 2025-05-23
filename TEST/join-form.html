@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>회원가입 폼</title>
+    <link rel="stylesheet" href="../front-exam-for-SCIT-47-blank/assets/css/join-form-style.css">
+    <script src="../front-exam-for-SCIT-47-blank/assets/js/join-form-js.js"></script>
+  </head>
+
+  <body>
+    <h2>회원가입</h2>
+    <form action="">
+    <fieldset>
+      <legend>기본 정보</legend>
+      <ul>
+        <li class="form-group">
+          <label class="required-label" for="name">이름</label>
+          <input type="text" id="name" name="name3" required>
+        </li>
+        <li class="form-group">
+          <label class="required-label" for="email">이메일</label>
+          <input type="email" id="email" name="email3" required>
+
+        </li>
+        <li class="form-group">
+          <label class="required-label" for="birth">생년월일</label>
+          <input type="date" id="birth" name="birth3" required>
+        </li>
+        <div id="ageDisplay"></div>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>추가 정보</legend>
+      <ul>
+        <li class="form-group">
+          <!-- 문제 7-6 -->
+          <label>성별</label>
+          <input type="radio" name="choice" id="gender-male">
+          <label for="gender-male">남성</label>
+          <input type="radio" name="choice" id="gender-female">
+          <label for="gender-female">여성</label>
+        </li>
+        <li class="form-group">
+          <!-- 문제 7-7 -->
+          <label>관심 분야</label>
+          <input type="checkbox" name="question" id="interest-frontend" value="111" checked>
+          <label for="interest-frontend">프론트엔드</label>
+          <input type="checkbox" name="question" id="interest-backend" value="222">
+          <label for="interest-backend">백엔드</label>
+          <input type="checkbox" name="question" id="interest-data" value="333">
+          <label for="interest-data">데이터베이스</label>
+          <label for="interest-other">기타:</label>
+          <input type="text" id="interest-other" name="interests3" value="">
+        </li>
+        <div id="interestError" class="error"></div>
+
+        <li class="form-group">
+          <label for="bio">자기소개</label>
+          <!-- 문제 7-2 -->
+          <textarea id="bio" name="bio3" rows="4" maxlength="300" placeholder="자유롭게 입력해주세요."></textarea>
+        </li>
+        <div id="bioCounter"></div>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>보안 정보</legend>
+      <ul>
+        <li class="form-group">
+          <label class="required-label" for="password">비밀번호</label>
+          <!-- 문제 7-4 -->
+          <input type="password" id="password" name="password3" required>
+        </li>
+        <div id="passwordError" class="error"></div>
+      </ul>
+    </fieldset>
+
+      <button type="submit" id="submit">제출</button>
+      <button type="reset" id="reset">재입력</button>
+
+    </form>
+
+  </body>
+
+</html>

@@ -1,0 +1,71 @@
+*,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 20px;
+        background-color: white;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        margin-right: 0.7em;
+      }
+
+      label[for="interest-other"] {
+        margin: 0;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9em;
+      }
+
+      fieldset {
+        margin-bottom: 20px;
+        padding: 3em;
+        border: 1px solid #ccc;
+      }
+
+      legend {
+        font-weight: bold;
+        padding: 0 10px;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        /* 문제 7-1 제공된 영상과 같이 부모의 폭을 따르도록 하세요 */
+        display: block;
+        margin: 0.5em;
+      }
+
+      /* 문제 7-3 */
+      [type="text"]{
+        width: 15ch;
+      }
+
+      #bioCounter {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 5px;
+      }
+
+      .required-label::after {
+        content: '*';
+        color: red;
+        margin-left: 4px;
+        font-weight: bold;
+      }

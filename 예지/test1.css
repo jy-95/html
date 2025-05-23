@@ -1,0 +1,23 @@
+#input1{
+  color: red;
+}
+
+#div1{
+  color: blue;
+}
+
+#button1 {
+  border: 1px solid red;
+}
+
+#flex-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#flex-div2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

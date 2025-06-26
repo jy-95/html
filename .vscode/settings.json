@@ -16,5 +16,8 @@
   "editor.insertSpaces": true,
   "path-autocomplete.enableFolderTrailingSlash": false,
   "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
-  "html.format.indentInnerHtml": true
+  "html.format.indentInnerHtml": true,
+  "files.associations": {
+    "stdio.h": "c"
+  }
 }
